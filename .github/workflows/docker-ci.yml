@@ -31,6 +31,17 @@ jobs:
           sleep 5
           curl http://localhost:8000/
 
+      - name: Build Monitor Image
+        run: docker build -t flask-monitor ./monitor
+      - name: Test flask + monitor
+        run: |
+          docker run -d --name flask-app -p 8000:8000 flask-docker-app
+          docker run -d --name flask-monitor --network="host" flask-monitor
+          sleep 10
+          curl http://localhost:8000/health
+          docker stop flask-app flask-monitor
+          docker rm flask-app flask-monitor
+          
 
 
       

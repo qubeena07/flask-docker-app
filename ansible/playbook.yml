@@ -1,0 +1,39 @@
+- hosts: localhost
+  vars:
+    ansible_python_interpreter: "{{ lookup('env', 'VIRTUAL_ENV') | default('/usr/bin/python3') }}/bin/python"
+    ansible_connection: local
+    docker_host: unix://{{ lookup('env','HOME') }}/.colima/default/docker.sock
+  tasks:
+    - name: Install Docker
+      homebrew:
+        name: docker
+        state: present
+
+    - name: Pull flask docker image
+      docker_image:
+        name: flask-docker-app
+        source: pull
+        docker_host: "{{ docker_host }}"
+
+    - name: Pull monitor docker image
+      docker_image:
+        name: flask-monitor
+        source: pull
+        docker_host: "{{ docker_host }}"
+
+    - name: Run flask docker container
+      docker_container:
+        name: flask-app
+        image: flask-docker-app
+        state: started
+        ports:
+          - "8001:8000"
+        docker_host: "{{ docker_host }}"
+
+    - name: Run monitor docker container
+      docker_container:
+        name: flask-monitor
+        image: flask-monitor
+        state: started
+        network_mode: host
+        docker_host: "{{ docker_host }}"

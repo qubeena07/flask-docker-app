@@ -1,0 +1,995 @@
+ansible-playbook [core 2.18.8]
+  config file = None
+  configured module search path = ['/Users/dipikaranabhat/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /Users/dipikaranabhat/ansible-venv/lib/python3.12/site-packages/ansible
+  ansible collection location = /Users/dipikaranabhat/.ansible/collections:/usr/share/ansible/collections
+  executable location = /Users/dipikaranabhat/ansible-venv/bin/ansible-playbook
+  python version = 3.12.5 (v3.12.5:ff3bc82f7c9, Aug  7 2024, 05:32:06) [Clang 13.0.0 (clang-1300.0.29.30)] (/Users/dipikaranabhat/ansible-venv/bin/python3.12)
+  jinja version = 3.1.6
+  libyaml = True
+No config file found; using defaults
+host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+Skipping due to inventory source not existing or not being readable by the current user
+script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+Skipping due to inventory source not existing or not being readable by the current user
+yaml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+Skipping due to inventory source not existing or not being readable by the current user
+ini declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+Skipping due to inventory source not existing or not being readable by the current user
+toml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+redirecting (type: modules) ansible.builtin.docker_image to community.docker.docker_image
+redirecting (type: modules) ansible.builtin.docker_image to community.docker.docker_image
+redirecting (type: modules) ansible.builtin.docker_container to community.docker.docker_container
+redirecting (type: modules) ansible.builtin.docker_container to community.docker.docker_container
+Skipping callback 'default', as we already have a stdout callback.
+Skipping callback 'minimal', as we already have a stdout callback.
+Skipping callback 'oneline', as we already have a stdout callback.
+
+PLAYBOOK: playbook.yml *********************************************************
+1 plays in ansible/playbook.yml
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+task path: /Users/dipikaranabhat/Documents/Documents - Dipika’s MacBook Pro/devops/flask-docker-app/ansible/playbook.yml:1
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: dipikaranabhat
+<127.0.0.1> EXEC /bin/sh -c 'echo ~dipikaranabhat && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/dipikaranabhat/.ansible/tmp `"&& mkdir "` echo /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.489322-17275-198897133848543 `" && echo ansible-tmp-1757199241.489322-17275-198897133848543="` echo /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.489322-17275-198897133848543 `" ) && sleep 0'
+Using module file /Users/dipikaranabhat/ansible-venv/lib/python3.12/site-packages/ansible/modules/setup.py
+<127.0.0.1> PUT /Users/dipikaranabhat/.ansible/tmp/ansible-local-172732vnp6kll/tmpui9g08c_ TO /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.489322-17275-198897133848543/AnsiballZ_setup.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+rwx /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.489322-17275-198897133848543/ /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.489322-17275-198897133848543/AnsiballZ_setup.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/Users/dipikaranabhat/ansible-venv/bin/python /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.489322-17275-198897133848543/AnsiballZ_setup.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.489322-17275-198897133848543/ > /dev/null 2>&1 && sleep 0'
+ok: [localhost]
+
+TASK [Install Docker] **********************************************************
+task path: /Users/dipikaranabhat/Documents/Documents - Dipika’s MacBook Pro/devops/flask-docker-app/ansible/playbook.yml:7
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: dipikaranabhat
+<127.0.0.1> EXEC /bin/sh -c 'echo ~dipikaranabhat && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/dipikaranabhat/.ansible/tmp `"&& mkdir "` echo /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.824123-17307-95688759853642 `" && echo ansible-tmp-1757199241.824123-17307-95688759853642="` echo /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.824123-17307-95688759853642 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.homebrew to community.general.homebrew
+Using module file /Users/dipikaranabhat/ansible-venv/lib/python3.12/site-packages/ansible_collections/community/general/plugins/modules/homebrew.py
+<127.0.0.1> PUT /Users/dipikaranabhat/.ansible/tmp/ansible-local-172732vnp6kll/tmpg6e85kpq TO /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.824123-17307-95688759853642/AnsiballZ_homebrew.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+rwx /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.824123-17307-95688759853642/ /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.824123-17307-95688759853642/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/Users/dipikaranabhat/ansible-venv/bin/python /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.824123-17307-95688759853642/AnsiballZ_homebrew.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199241.824123-17307-95688759853642/ > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "changed": false,
+    "changed_pkgs": [],
+    "invocation": {
+        "module_args": {
+            "force_formula": false,
+            "install_options": [],
+            "name": [
+                "docker"
+            ],
+            "path": "/usr/local/bin:/opt/homebrew/bin:/home/linuxbrew/.linuxbrew/bin",
+            "state": "present",
+            "update_homebrew": false,
+            "upgrade_all": false,
+            "upgrade_options": []
+        }
+    },
+    "msg": "Package already installed: docker",
+    "unchanged_pkgs": [
+        "docker"
+    ]
+}
+
+TASK [Pull flask docker image] *************************************************
+task path: /Users/dipikaranabhat/Documents/Documents - Dipika’s MacBook Pro/devops/flask-docker-app/ansible/playbook.yml:12
+redirecting (type: modules) ansible.builtin.docker_image to community.docker.docker_image
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: dipikaranabhat
+<127.0.0.1> EXEC /bin/sh -c 'echo ~dipikaranabhat && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/dipikaranabhat/.ansible/tmp `"&& mkdir "` echo /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199242.940573-17568-111765325511985 `" && echo ansible-tmp-1757199242.940573-17568-111765325511985="` echo /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199242.940573-17568-111765325511985 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.docker_image to community.docker.docker_image
+Using module file /Users/dipikaranabhat/ansible-venv/lib/python3.12/site-packages/ansible_collections/community/docker/plugins/modules/docker_image.py
+<127.0.0.1> PUT /Users/dipikaranabhat/.ansible/tmp/ansible-local-172732vnp6kll/tmp5zu0clvh TO /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199242.940573-17568-111765325511985/AnsiballZ_docker_image.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+rwx /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199242.940573-17568-111765325511985/ /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199242.940573-17568-111765325511985/AnsiballZ_docker_image.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/Users/dipikaranabhat/ansible-venv/bin/python /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199242.940573-17568-111765325511985/AnsiballZ_docker_image.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199242.940573-17568-111765325511985/ > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "actions": [],
+    "changed": false,
+    "image": {
+        "Architecture": "arm64",
+        "Author": "",
+        "Comment": "",
+        "Config": {
+            "Cmd": [
+                "python",
+                "app.py"
+            ],
+            "Entrypoint": null,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568",
+                "PYTHON_VERSION=3.8.20"
+            ],
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Labels": null,
+            "OnBuild": null,
+            "User": "",
+            "Volumes": null,
+            "WorkingDir": "/app"
+        },
+        "Created": "2025-08-30T15:42:11.201692538-05:00",
+        "Descriptor": {
+            "digest": "sha256:aaf3563466fc476fdec2b0b50863751be71f8f49109f7900f54944cb04116d44",
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "size": 2054
+        },
+        "DockerVersion": "",
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Id": "sha256:aaf3563466fc476fdec2b0b50863751be71f8f49109f7900f54944cb04116d44",
+        "Metadata": {
+            "LastTagTime": "2025-08-30T20:42:11.219005798Z"
+        },
+        "Os": "linux",
+        "Parent": "sha256:5dca5edeba158479a37d1a1379a2f4d4aa1c08443974bf288417c5a66d501c07",
+        "RepoDigests": [
+            "flask-docker-app@sha256:aaf3563466fc476fdec2b0b50863751be71f8f49109f7900f54944cb04116d44"
+        ],
+        "RepoTags": [
+            "flask-docker-app:latest"
+        ],
+        "RootFS": {
+            "Layers": [
+                "sha256:054df1200f3e1d70e2ebeafa03c965d0dd34e7dab90b4ea24963352e5590b573",
+                "sha256:01183e0d6e038c10d9713a231659675a52e92ec5b3c95304a03eba3933a0dd84",
+                "sha256:68927dfce826be9c6645511b10a7e5fd851b3bc796946b4f9502b65b16326e65",
+                "sha256:71be48336db2154ce913060f8ab9a9ac05accebff277d9a9e1cf398e9a5742cf",
+                "sha256:9198584ddcc5e3609857f5d08b9108e334d6261568a12924aa71e81c45b3e97f",
+                "sha256:c47ce33d8054dc3985c34f4ae0c4013db6304e057c82b8d965c85600930316e7",
+                "sha256:f981cb207baad501e6a9d6caba7c03180401d7c5ba45890a26497cfd4b39c6ef",
+                "sha256:9cf3e89ac0f1d5d7af45bcde6c335e576d3255993f70bfa0b5449cbe80405816"
+            ],
+            "Type": "layers"
+        },
+        "Size": 51694269
+    },
+    "invocation": {
+        "module_args": {
+            "api_version": "auto",
+            "archive_path": null,
+            "build": null,
+            "ca_path": null,
+            "client_cert": null,
+            "client_key": null,
+            "debug": false,
+            "docker_host": "unix:///Users/dipikaranabhat/.colima/default/docker.sock",
+            "force_absent": false,
+            "force_source": false,
+            "force_tag": false,
+            "load_path": null,
+            "name": "flask-docker-app",
+            "pull": null,
+            "push": false,
+            "repository": null,
+            "source": "pull",
+            "state": "present",
+            "tag": "latest",
+            "timeout": 60,
+            "tls": false,
+            "tls_hostname": null,
+            "use_ssh_client": false,
+            "validate_certs": false
+        }
+    }
+}
+
+TASK [Pull monitor docker image] ***********************************************
+task path: /Users/dipikaranabhat/Documents/Documents - Dipika’s MacBook Pro/devops/flask-docker-app/ansible/playbook.yml:18
+redirecting (type: modules) ansible.builtin.docker_image to community.docker.docker_image
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: dipikaranabhat
+<127.0.0.1> EXEC /bin/sh -c 'echo ~dipikaranabhat && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/dipikaranabhat/.ansible/tmp `"&& mkdir "` echo /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.2589571-17588-259356800796817 `" && echo ansible-tmp-1757199243.2589571-17588-259356800796817="` echo /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.2589571-17588-259356800796817 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.docker_image to community.docker.docker_image
+Using module file /Users/dipikaranabhat/ansible-venv/lib/python3.12/site-packages/ansible_collections/community/docker/plugins/modules/docker_image.py
+<127.0.0.1> PUT /Users/dipikaranabhat/.ansible/tmp/ansible-local-172732vnp6kll/tmps3ujbs13 TO /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.2589571-17588-259356800796817/AnsiballZ_docker_image.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+rwx /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.2589571-17588-259356800796817/ /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.2589571-17588-259356800796817/AnsiballZ_docker_image.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/Users/dipikaranabhat/ansible-venv/bin/python /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.2589571-17588-259356800796817/AnsiballZ_docker_image.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.2589571-17588-259356800796817/ > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "actions": [],
+    "changed": false,
+    "image": {
+        "Architecture": "arm64",
+        "Author": "",
+        "Comment": "",
+        "Config": {
+            "Cmd": [
+                "python3",
+                "monitor.py"
+            ],
+            "Entrypoint": null,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.11",
+                "PYTHON_SHA256=c30bb24b7f1e9a19b11b55a546434f74e739bb4c271a3e3a80ff4380d49f7adb"
+            ],
+            "Labels": null,
+            "OnBuild": null,
+            "User": "",
+            "Volumes": null,
+            "WorkingDir": "/app"
+        },
+        "Created": "2025-09-06T17:17:55.527373807-05:00",
+        "Descriptor": {
+            "digest": "sha256:e320562b962503ae2372588bae9c1b4135bb5109423880d246b3e3d87f0d1d13",
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "size": 2054
+        },
+        "DockerVersion": "",
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Id": "sha256:e320562b962503ae2372588bae9c1b4135bb5109423880d246b3e3d87f0d1d13",
+        "Metadata": {
+            "LastTagTime": "2025-09-06T22:17:55.548390287Z"
+        },
+        "Os": "linux",
+        "Parent": "sha256:c010127cc4d92bcdb32a426979e004c3d428f7da01a645fbfbcbbdf859df186b",
+        "RepoDigests": [
+            "flask-monitor@sha256:e320562b962503ae2372588bae9c1b4135bb5109423880d246b3e3d87f0d1d13"
+        ],
+        "RepoTags": [
+            "flask-monitor:latest"
+        ],
+        "RootFS": {
+            "Layers": [
+                "sha256:2a7f563c8c5a6f6ea12726995d454456dcf25752712a1cdf1d7e1b47c23179af",
+                "sha256:92bb8d2db95dacbaf482c5b8e75df664db14883c62710bb866e2cfa38e2664cf",
+                "sha256:40baad5f6a6de8e475eb21cade1fbd24784297f58d69af9f4c8db38f4f282702",
+                "sha256:456436e73494aa1b336c6dba6dda60fef2857f74f20f20258916d692e72f4558",
+                "sha256:70a5b6d05e89d8e146168fdc5fa2d776b8aa0ee014285f3ae2255a8bff9ea0f4",
+                "sha256:734f96f580b9eb0c4ee8a5d9ab03f3f4d1a7cc8411d22ba0b362bf85c0edd5df",
+                "sha256:edac365580bdf594c32696fa9b46e2c2d6121bc19a6e6ffa53a86ba361d816f3",
+                "sha256:0319e6eb1f19683add794bcfbd38fbbdfc270983187a7db1e34dc10821d5507b"
+            ],
+            "Type": "layers"
+        },
+        "Size": 48658324
+    },
+    "invocation": {
+        "module_args": {
+            "api_version": "auto",
+            "archive_path": null,
+            "build": null,
+            "ca_path": null,
+            "client_cert": null,
+            "client_key": null,
+            "debug": false,
+            "docker_host": "unix:///Users/dipikaranabhat/.colima/default/docker.sock",
+            "force_absent": false,
+            "force_source": false,
+            "force_tag": false,
+            "load_path": null,
+            "name": "flask-monitor",
+            "pull": null,
+            "push": false,
+            "repository": null,
+            "source": "pull",
+            "state": "present",
+            "tag": "latest",
+            "timeout": 60,
+            "tls": false,
+            "tls_hostname": null,
+            "use_ssh_client": false,
+            "validate_certs": false
+        }
+    }
+}
+
+TASK [Run flask docker container] **********************************************
+task path: /Users/dipikaranabhat/Documents/Documents - Dipika’s MacBook Pro/devops/flask-docker-app/ansible/playbook.yml:24
+redirecting (type: modules) ansible.builtin.docker_container to community.docker.docker_container
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: dipikaranabhat
+<127.0.0.1> EXEC /bin/sh -c 'echo ~dipikaranabhat && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/dipikaranabhat/.ansible/tmp `"&& mkdir "` echo /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.512165-17608-85329079162050 `" && echo ansible-tmp-1757199243.512165-17608-85329079162050="` echo /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.512165-17608-85329079162050 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.docker_container to community.docker.docker_container
+Using module file /Users/dipikaranabhat/ansible-venv/lib/python3.12/site-packages/ansible_collections/community/docker/plugins/modules/docker_container.py
+<127.0.0.1> PUT /Users/dipikaranabhat/.ansible/tmp/ansible-local-172732vnp6kll/tmp5h6kcfav TO /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.512165-17608-85329079162050/AnsiballZ_docker_container.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+rwx /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.512165-17608-85329079162050/ /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.512165-17608-85329079162050/AnsiballZ_docker_container.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/Users/dipikaranabhat/ansible-venv/bin/python /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.512165-17608-85329079162050/AnsiballZ_docker_container.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.512165-17608-85329079162050/ > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "changed": false,
+    "container": {
+        "AppArmorProfile": "docker-default",
+        "Args": [
+            "app.py"
+        ],
+        "Config": {
+            "AttachStderr": true,
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "Cmd": [
+                "python",
+                "app.py"
+            ],
+            "Domainname": "",
+            "Entrypoint": null,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568",
+                "PYTHON_VERSION=3.8.20"
+            ],
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Hostname": "47e2fab59c61",
+            "Image": "flask-docker-app",
+            "Labels": {},
+            "OnBuild": null,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Tty": false,
+            "User": "",
+            "Volumes": null,
+            "WorkingDir": "/app"
+        },
+        "Created": "2025-09-06T22:51:35.722245667Z",
+        "Driver": "overlayfs",
+        "ExecIDs": null,
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "HostConfig": {
+            "AutoRemove": false,
+            "Binds": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceWriteIOps": null,
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Cgroup": "",
+            "CgroupParent": "",
+            "CgroupnsMode": "private",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "ContainerIDFile": "",
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpuShares": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "Devices": null,
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IOMaximumBandwidth": 0,
+            "IOMaximumIOps": 0,
+            "IpcMode": "private",
+            "Isolation": "",
+            "Links": null,
+            "LogConfig": {
+                "Config": {},
+                "Type": "json-file"
+            },
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "Memory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "NanoCpus": 0,
+            "NetworkMode": "bridge",
+            "OomKillDisable": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "PidsLimit": null,
+            "PortBindings": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8001"
+                    }
+                ]
+            },
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ],
+            "ReadonlyRootfs": false,
+            "RestartPolicy": {
+                "MaximumRetryCount": 0,
+                "Name": "no"
+            },
+            "Runtime": "runc",
+            "SecurityOpt": null,
+            "ShmSize": 67108864,
+            "UTSMode": "",
+            "Ulimits": null,
+            "UsernsMode": "",
+            "VolumeDriver": "",
+            "VolumesFrom": null
+        },
+        "HostnamePath": "/var/lib/docker/containers/47e2fab59c6194ed513285f886835fb8b4ce731a3141275919d1faa9267eee32/hostname",
+        "HostsPath": "/var/lib/docker/containers/47e2fab59c6194ed513285f886835fb8b4ce731a3141275919d1faa9267eee32/hosts",
+        "Id": "47e2fab59c6194ed513285f886835fb8b4ce731a3141275919d1faa9267eee32",
+        "Image": "sha256:aaf3563466fc476fdec2b0b50863751be71f8f49109f7900f54944cb04116d44",
+        "ImageManifestDescriptor": {
+            "digest": "sha256:aaf3563466fc476fdec2b0b50863751be71f8f49109f7900f54944cb04116d44",
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "platform": {
+                "architecture": "arm64",
+                "os": "linux"
+            },
+            "size": 2054
+        },
+        "LogPath": "/var/lib/docker/containers/47e2fab59c6194ed513285f886835fb8b4ce731a3141275919d1faa9267eee32/47e2fab59c6194ed513285f886835fb8b4ce731a3141275919d1faa9267eee32-json.log",
+        "MountLabel": "",
+        "Mounts": [],
+        "Name": "/flask-app",
+        "NetworkSettings": {
+            "Bridge": "",
+            "EndpointID": "a90485cb5c48a3353fab0c1a09e32747285615290b90e3e6a5def281db4430d5",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "HairpinMode": false,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "MacAddress": "8a:5c:de:f9:f3:fa",
+            "Networks": {
+                "bridge": {
+                    "Aliases": null,
+                    "DNSNames": null,
+                    "DriverOpts": null,
+                    "EndpointID": "a90485cb5c48a3353fab0c1a09e32747285615290b90e3e6a5def281db4430d5",
+                    "Gateway": "172.17.0.1",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "GwPriority": 0,
+                    "IPAMConfig": null,
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "Links": null,
+                    "MacAddress": "8a:5c:de:f9:f3:fa",
+                    "NetworkID": "d37308a370522f17c739f90d627cd32da20143edbdc96dcc564acf3dd6c6d995"
+                }
+            },
+            "Ports": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8001"
+                    }
+                ]
+            },
+            "SandboxID": "753aed8bc2aa31cc6ff962afc680b8589463c48d13e72a628e1ed805e74140e7",
+            "SandboxKey": "/var/run/docker/netns/753aed8bc2aa",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null
+        },
+        "Path": "python",
+        "Platform": "linux",
+        "ProcessLabel": "",
+        "ResolvConfPath": "/var/lib/docker/containers/47e2fab59c6194ed513285f886835fb8b4ce731a3141275919d1faa9267eee32/resolv.conf",
+        "RestartCount": 0,
+        "State": {
+            "Dead": false,
+            "Error": "",
+            "ExitCode": 0,
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "OOMKilled": false,
+            "Paused": false,
+            "Pid": 5827,
+            "Restarting": false,
+            "Running": true,
+            "StartedAt": "2025-09-06T22:51:35.752288514Z",
+            "Status": "running"
+        }
+    },
+    "invocation": {
+        "module_args": {
+            "api_version": "auto",
+            "auto_remove": null,
+            "blkio_weight": null,
+            "ca_path": null,
+            "cap_drop": null,
+            "capabilities": null,
+            "cgroup_parent": null,
+            "cgroupns_mode": null,
+            "cleanup": false,
+            "client_cert": null,
+            "client_key": null,
+            "command": null,
+            "command_handling": "correct",
+            "comparisons": null,
+            "container_default_behavior": "no_defaults",
+            "cpu_period": null,
+            "cpu_quota": null,
+            "cpu_shares": null,
+            "cpus": null,
+            "cpuset_cpus": null,
+            "cpuset_mems": null,
+            "debug": false,
+            "default_host_ip": null,
+            "detach": null,
+            "device_cgroup_rules": null,
+            "device_read_bps": null,
+            "device_read_iops": null,
+            "device_requests": null,
+            "device_write_bps": null,
+            "device_write_iops": null,
+            "devices": null,
+            "dns_opts": null,
+            "dns_search_domains": null,
+            "dns_servers": null,
+            "docker_host": "unix:///Users/dipikaranabhat/.colima/default/docker.sock",
+            "domainname": null,
+            "entrypoint": null,
+            "env": null,
+            "env_file": null,
+            "etc_hosts": null,
+            "exposed_ports": null,
+            "force_kill": false,
+            "groups": null,
+            "healthcheck": null,
+            "healthy_wait_timeout": 300.0,
+            "hostname": null,
+            "image": "flask-docker-app",
+            "image_comparison": "desired-image",
+            "image_label_mismatch": "ignore",
+            "image_name_mismatch": "recreate",
+            "init": null,
+            "interactive": null,
+            "ipc_mode": null,
+            "keep_volumes": true,
+            "kernel_memory": null,
+            "kill_signal": null,
+            "labels": null,
+            "links": null,
+            "log_driver": null,
+            "log_options": null,
+            "mac_address": null,
+            "memory": null,
+            "memory_reservation": null,
+            "memory_swap": null,
+            "memory_swappiness": null,
+            "mounts": null,
+            "name": "flask-app",
+            "network_mode": null,
+            "networks": null,
+            "networks_cli_compatible": true,
+            "oom_killer": null,
+            "oom_score_adj": null,
+            "output_logs": false,
+            "paused": null,
+            "pid_mode": null,
+            "pids_limit": null,
+            "platform": null,
+            "ports": [
+                "8001:8000"
+            ],
+            "privileged": null,
+            "publish_all_ports": null,
+            "published_ports": [
+                "8001:8000"
+            ],
+            "pull": "missing",
+            "pull_check_mode_behavior": "image_not_present",
+            "read_only": null,
+            "recreate": false,
+            "removal_wait_timeout": null,
+            "restart": false,
+            "restart_policy": null,
+            "restart_retries": null,
+            "runtime": null,
+            "security_opts": null,
+            "shm_size": null,
+            "state": "started",
+            "stop_signal": null,
+            "stop_timeout": null,
+            "storage_opts": null,
+            "sysctls": null,
+            "timeout": 60,
+            "tls": false,
+            "tls_hostname": null,
+            "tmpfs": null,
+            "tty": null,
+            "ulimits": null,
+            "use_ssh_client": false,
+            "user": null,
+            "userns_mode": null,
+            "uts": null,
+            "validate_certs": false,
+            "volume_driver": null,
+            "volumes": null,
+            "volumes_from": null,
+            "working_dir": null
+        }
+    }
+}
+
+TASK [Run monitor docker container] ********************************************
+task path: /Users/dipikaranabhat/Documents/Documents - Dipika’s MacBook Pro/devops/flask-docker-app/ansible/playbook.yml:33
+redirecting (type: modules) ansible.builtin.docker_container to community.docker.docker_container
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: dipikaranabhat
+<127.0.0.1> EXEC /bin/sh -c 'echo ~dipikaranabhat && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/dipikaranabhat/.ansible/tmp `"&& mkdir "` echo /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.84384-17638-170055165364498 `" && echo ansible-tmp-1757199243.84384-17638-170055165364498="` echo /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.84384-17638-170055165364498 `" ) && sleep 0'
+redirecting (type: modules) ansible.builtin.docker_container to community.docker.docker_container
+Using module file /Users/dipikaranabhat/ansible-venv/lib/python3.12/site-packages/ansible_collections/community/docker/plugins/modules/docker_container.py
+<127.0.0.1> PUT /Users/dipikaranabhat/.ansible/tmp/ansible-local-172732vnp6kll/tmpes5pb_88 TO /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.84384-17638-170055165364498/AnsiballZ_docker_container.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+rwx /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.84384-17638-170055165364498/ /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.84384-17638-170055165364498/AnsiballZ_docker_container.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/Users/dipikaranabhat/ansible-venv/bin/python /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.84384-17638-170055165364498/AnsiballZ_docker_container.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /Users/dipikaranabhat/.ansible/tmp/ansible-tmp-1757199243.84384-17638-170055165364498/ > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "changed": false,
+    "container": {
+        "AppArmorProfile": "docker-default",
+        "Args": [
+            "monitor.py"
+        ],
+        "Config": {
+            "AttachStderr": true,
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "Cmd": [
+                "python3",
+                "monitor.py"
+            ],
+            "Domainname": "",
+            "Entrypoint": null,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.11",
+                "PYTHON_SHA256=c30bb24b7f1e9a19b11b55a546434f74e739bb4c271a3e3a80ff4380d49f7adb"
+            ],
+            "Hostname": "colima",
+            "Image": "flask-monitor",
+            "Labels": {},
+            "OnBuild": null,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Tty": false,
+            "User": "",
+            "Volumes": null,
+            "WorkingDir": "/app"
+        },
+        "Created": "2025-09-06T22:51:36.072157344Z",
+        "Driver": "overlayfs",
+        "ExecIDs": null,
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "HostConfig": {
+            "AutoRemove": false,
+            "Binds": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceWriteIOps": null,
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Cgroup": "",
+            "CgroupParent": "",
+            "CgroupnsMode": "private",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "ContainerIDFile": "",
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpuShares": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "Devices": null,
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IOMaximumBandwidth": 0,
+            "IOMaximumIOps": 0,
+            "IpcMode": "private",
+            "Isolation": "",
+            "Links": null,
+            "LogConfig": {
+                "Config": {},
+                "Type": "json-file"
+            },
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "Memory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "NanoCpus": 0,
+            "NetworkMode": "host",
+            "OomKillDisable": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "PidsLimit": null,
+            "PortBindings": null,
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ],
+            "ReadonlyRootfs": false,
+            "RestartPolicy": {
+                "MaximumRetryCount": 0,
+                "Name": "no"
+            },
+            "Runtime": "runc",
+            "SecurityOpt": null,
+            "ShmSize": 67108864,
+            "UTSMode": "",
+            "Ulimits": null,
+            "UsernsMode": "",
+            "VolumeDriver": "",
+            "VolumesFrom": null
+        },
+        "HostnamePath": "/var/lib/docker/containers/c82f13ffe97eaf3c89f8752e00ee2129baac272461b322bc3f4ee52ead747094/hostname",
+        "HostsPath": "/var/lib/docker/containers/c82f13ffe97eaf3c89f8752e00ee2129baac272461b322bc3f4ee52ead747094/hosts",
+        "Id": "c82f13ffe97eaf3c89f8752e00ee2129baac272461b322bc3f4ee52ead747094",
+        "Image": "sha256:e320562b962503ae2372588bae9c1b4135bb5109423880d246b3e3d87f0d1d13",
+        "ImageManifestDescriptor": {
+            "digest": "sha256:e320562b962503ae2372588bae9c1b4135bb5109423880d246b3e3d87f0d1d13",
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "platform": {
+                "architecture": "arm64",
+                "os": "linux"
+            },
+            "size": 2054
+        },
+        "LogPath": "/var/lib/docker/containers/c82f13ffe97eaf3c89f8752e00ee2129baac272461b322bc3f4ee52ead747094/c82f13ffe97eaf3c89f8752e00ee2129baac272461b322bc3f4ee52ead747094-json.log",
+        "MountLabel": "",
+        "Mounts": [],
+        "Name": "/flask-monitor",
+        "NetworkSettings": {
+            "Bridge": "",
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "HairpinMode": false,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "MacAddress": "",
+            "Networks": {
+                "host": {
+                    "Aliases": null,
+                    "DNSNames": null,
+                    "DriverOpts": null,
+                    "EndpointID": "20f14b8dc9e8bc002b06753f05d93a4a2b5456a4b0ca6a47d071b1f6c35f8284",
+                    "Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "GwPriority": 0,
+                    "IPAMConfig": null,
+                    "IPAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "Links": null,
+                    "MacAddress": "",
+                    "NetworkID": "b81f7309c9ce240cd4b8957150095ae48ff46b53c8811c57cf7eacb09d1d0aee"
+                }
+            },
+            "Ports": {},
+            "SandboxID": "e4e55192c7f7a8756953e7e923a6fb52a1b7dcfe54bd94fdf3e72cbc699232c2",
+            "SandboxKey": "/var/run/docker/netns/default",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null
+        },
+        "Path": "python3",
+        "Platform": "linux",
+        "ProcessLabel": "",
+        "ResolvConfPath": "/var/lib/docker/containers/c82f13ffe97eaf3c89f8752e00ee2129baac272461b322bc3f4ee52ead747094/resolv.conf",
+        "RestartCount": 0,
+        "State": {
+            "Dead": false,
+            "Error": "",
+            "ExitCode": 0,
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "OOMKilled": false,
+            "Paused": false,
+            "Pid": 5897,
+            "Restarting": false,
+            "Running": true,
+            "StartedAt": "2025-09-06T22:51:36.107244852Z",
+            "Status": "running"
+        }
+    },
+    "invocation": {
+        "module_args": {
+            "api_version": "auto",
+            "auto_remove": null,
+            "blkio_weight": null,
+            "ca_path": null,
+            "cap_drop": null,
+            "capabilities": null,
+            "cgroup_parent": null,
+            "cgroupns_mode": null,
+            "cleanup": false,
+            "client_cert": null,
+            "client_key": null,
+            "command": null,
+            "command_handling": "correct",
+            "comparisons": null,
+            "container_default_behavior": "no_defaults",
+            "cpu_period": null,
+            "cpu_quota": null,
+            "cpu_shares": null,
+            "cpus": null,
+            "cpuset_cpus": null,
+            "cpuset_mems": null,
+            "debug": false,
+            "default_host_ip": null,
+            "detach": null,
+            "device_cgroup_rules": null,
+            "device_read_bps": null,
+            "device_read_iops": null,
+            "device_requests": null,
+            "device_write_bps": null,
+            "device_write_iops": null,
+            "devices": null,
+            "dns_opts": null,
+            "dns_search_domains": null,
+            "dns_servers": null,
+            "docker_host": "unix:///Users/dipikaranabhat/.colima/default/docker.sock",
+            "domainname": null,
+            "entrypoint": null,
+            "env": null,
+            "env_file": null,
+            "etc_hosts": null,
+            "exposed_ports": null,
+            "force_kill": false,
+            "groups": null,
+            "healthcheck": null,
+            "healthy_wait_timeout": 300.0,
+            "hostname": null,
+            "image": "flask-monitor",
+            "image_comparison": "desired-image",
+            "image_label_mismatch": "ignore",
+            "image_name_mismatch": "recreate",
+            "init": null,
+            "interactive": null,
+            "ipc_mode": null,
+            "keep_volumes": true,
+            "kernel_memory": null,
+            "kill_signal": null,
+            "labels": null,
+            "links": null,
+            "log_driver": null,
+            "log_options": null,
+            "mac_address": null,
+            "memory": null,
+            "memory_reservation": null,
+            "memory_swap": null,
+            "memory_swappiness": null,
+            "mounts": null,
+            "name": "flask-monitor",
+            "network_mode": "host",
+            "networks": null,
+            "networks_cli_compatible": true,
+            "oom_killer": null,
+            "oom_score_adj": null,
+            "output_logs": false,
+            "paused": null,
+            "pid_mode": null,
+            "pids_limit": null,
+            "platform": null,
+            "privileged": null,
+            "publish_all_ports": null,
+            "published_ports": null,
+            "pull": "missing",
+            "pull_check_mode_behavior": "image_not_present",
+            "read_only": null,
+            "recreate": false,
+            "removal_wait_timeout": null,
+            "restart": false,
+            "restart_policy": null,
+            "restart_retries": null,
+            "runtime": null,
+            "security_opts": null,
+            "shm_size": null,
+            "state": "started",
+            "stop_signal": null,
+            "stop_timeout": null,
+            "storage_opts": null,
+            "sysctls": null,
+            "timeout": 60,
+            "tls": false,
+            "tls_hostname": null,
+            "tmpfs": null,
+            "tty": null,
+            "ulimits": null,
+            "use_ssh_client": false,
+            "user": null,
+            "userns_mode": null,
+            "uts": null,
+            "validate_certs": false,
+            "volume_driver": null,
+            "volumes": null,
+            "volumes_from": null,
+            "working_dir": null
+        }
+    }
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
