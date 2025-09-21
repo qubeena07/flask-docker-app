@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  web:
+    build: ./app
+    ports:
+      - "8000:8000"
+  monitor:
+    build: ./monitor
+    depends_on:
+      web:
+        condition: service_healthy
+    environment:
+      - TARGET_URL=http://web:8000/health
+      - CHECK_INTERVAL=5
+      - DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/1419422484024786994/FmMPfythc2JeTx6mn2fvfsII1fgz_ahnPIxsZbRW6_waRZxgABM6u3PR8OxowvtLW_62
+    restart: always

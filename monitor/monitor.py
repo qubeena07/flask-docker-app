@@ -3,7 +3,7 @@ import time
 
 #url of the flask api 
 URL = "http://flask-api:8000/health"
-Check_interval = 10  # seconds
+Check_interval = 5  # seconds
 
 while True:
     try:
