@@ -28,7 +28,7 @@ jobs:
         run: echo "No tests available"
 
       - name: Build web Docker image
-        run: docker build -t flask-docker-app ./app
+        run: docker build -t flask-docker-app .
 
       - name: Build monitor Docker image
         run: docker build -t flask-monitor ./monitor
