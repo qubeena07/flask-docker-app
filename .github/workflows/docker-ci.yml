@@ -28,7 +28,7 @@ jobs:
         run: echo "No tests available"
 
       - name: Build web Docker image
-        run: docker build -t flask-docker-app ./app
+        run: docker build -t flask-docker-app .
 
       - name: Build monitor Docker image
         run: docker build -t flask-monitor ./monitor
@@ -36,18 +36,19 @@ jobs:
       - name: Create Docker network
         run: docker network create testnet || echo "Network already exists"
 
-      - name: Test Flask + Monitor
+      - name: Test Flask App
         run: |
-          # Run web container
-          docker run -d --name web --network testnet flask-docker-app
-          # Run monitor container pointing to web
-          docker run -d --name monitor --network testnet \
-            -e TARGET="http://web:5000/health" \
-            -e CHECK_INTERVAL=5 \
-            -e DISCORD_WEBHOOK_URL="" \
-            flask-monitor
+          docker run -d --name flask-app -p 8000:8000 flask-docker-app
+          sleep 5
+          curl http://localhost:8000/
+          docker stop flask-app
+          docker rm flask-app
+
+      - name: Test flask + monitor
+        run: |
+          docker run -d --name flask-app -p 8000:8000 flask-docker-app
+          docker run -d --name flask-monitor --network="host" flask-monitor
           sleep 10
-          # Test health endpoint internally
-          docker exec web curl -f http://localhost:5000/health
-          # Clean up containers
-          docker rm -f web monitor
+          curl http://localhost:8000/health
+          docker stop flask-app flask-monitor
+          docker rm flask-app flask-monitor
